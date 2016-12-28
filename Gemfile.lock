@@ -209,6 +209,10 @@ GEM
     slim (3.0.7)
       temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
+    slim-rails (3.1.1)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (~> 3.0)
     slim_lint (0.10.0)
       rake (>= 10, < 13)
       rubocop (>= 0.36.0)
@@ -280,6 +284,7 @@ DEPENDENCIES
   scss_lint
   shoulda-matchers
   simplecov
+  slim-rails
   slim_lint
   spring
   spring-watcher-listen (~> 2.0.0)
