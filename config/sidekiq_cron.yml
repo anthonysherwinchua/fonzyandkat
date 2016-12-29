@@ -1,0 +1,4 @@
+scrape_instagram_job:
+  cron: '0 * * * * *'
+  class: 'ScrapeInstagramJob'
+  queue: default

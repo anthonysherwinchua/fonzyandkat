@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
-  def index; end
+  def index
+    @photos = Image.all
+  end
 
 end

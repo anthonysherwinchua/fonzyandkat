@@ -24,6 +24,13 @@ gem 'adminlte2-rails'
 
 gem 'rollbar'
 
+# Use to scrape instagram public contents -- because Instagram don't want us to have their content via their API
+gem 'insta_scrape'
+
+# Use sidekiq, redis and sidekiq_cron for scheduled background jobs
+gem 'sidekiq'
+gem 'sidekiq-cron', '~> 0.4.0'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
