@@ -19,23 +19,23 @@ section#about
       .row
         .col-md-4
           h2 Foncy
-          p
+          p.red
             | Foncy, 21 Tahun. Pria tak tampan yang bercita-cita menjadi jutawan dengan modal pas-pasan.
             | Hobi berenang, menolong teman, sepak bola, main futsal, main PES, dan segala sesuatu tentang bal-balan.
             | Bisanya cuma nyinyir dan komentar, agak sombong tapi nggak arogan.
-          blockquote
+          blockquote.red
             | Cinta itu.. jika kamu bilang iya ~ waktu aku bertanya "Maukah kau menikah denganku?" #eeaaa
             small Foncy
         .col-md-4
           .about-img-container
-          = image_tag 'pages/bottom.png', class: 'img-responsive about-img'
+            = image_tag 'pages/bottom.png', class: 'img-responsive about-img'
         .col-md-4
           h2 Kat
-          p
+          p.red
             | Kat, 20 Tahun. Wanita periang yang bercita-cita menjadi seorang pendidik dan pengajar.
             | Murah senyum, galak, tapi sangat cengeng. Tinggi, langsing, hidung pesek dan bergingsul.
             | Hobi makan es krim, mie ayam dan ngambek. Care sama temen dan pokoknya lakik #ehh.
-          blockquote
+          blockquote.red
             | Cinta itu.. jika kamu langsung datang kerumah dan melamarku ~ #duhh
             small Kat
 section#ceremony
@@ -57,25 +57,18 @@ section#photos
       .col-md-4
         = image_tag 'pages/bottom.png', class: 'img-responsive about-img'
         h2 Wedding Gallery
-        p Here, you can put photos of about couple, prewedd, and many more.
+        p.red These photos are from instagram with hashtag #foncyandkat
       .col-md-8
         #wedding-photo.carousel.slide data-ride="carousel"
           .carousel-inner
-            - @photos.each_slice(3) do |photos|
-              .item
+            - @photos.each_slice(3).with_index do |(*photos), index|
+              .item class="#{'active' if index == 0}"
                 .row
                   - photos.each do |record|
                     .col-md-4.col-sm-4.col-xs-12.animated.fadeInLeftBig
                       = link_to record.image_url, class: 'gallery-images' do
                         .photo-gallery
                           = image_tag record.image_url, class: 'img-responsve'
-            .item.active
-              .row
-                - 4.upto(6).each do |i|
-                  .col-md-4.col-sm-4.col-xs-12.animated.fadeInLeftBig
-                    = link_to image_path("pages/wedding-photo-0#{i}.jpg"), class: 'gallery-images' do
-                      .photo-gallery
-                        = image_tag "pages/wedding-photo-0#{i}.jpg", class: 'img-responsve'
           a.left.carousel-control data-slide="prev" href="#wedding-photo"
             span.glyphicon.glyphicon-chevron-left
           a.right.carousel-control data-slide="next" href="#wedding-photo"
@@ -90,7 +83,7 @@ section#story
           li
             h3.content-avatar.avatar-top
               .img-avatar style="background-image: url('#{image_path('pages/gravatar.jpg')}');"
-            ul
+            ul.red
               li.content-item.content-text
                 h3 Hae :"
                 .text I meet you at the first time. I smile, and you don't smile back to me. I was silent, and you laugh out loud alone. I'ts so fuck'in romantic epic. :))
