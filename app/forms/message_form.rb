@@ -8,7 +8,7 @@ class MessageForm < BaseForm
 
   def save
     if @message.save
-
+      MessageNotifierMailer.new_msg(@message.id).deliver_later
     end
   end
 
