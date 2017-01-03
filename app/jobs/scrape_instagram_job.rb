@@ -1,7 +1,7 @@
 class ScrapeInstagramJob < ApplicationJob
   queue_as :default
 
-  def perform(*args)
+  def perform(*_args)
     ScrapeInstagramService.call
   end
 end
