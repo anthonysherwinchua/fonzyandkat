@@ -12,6 +12,7 @@
 !/log/.keep
 /tmp
 /coverage/*
+/docs/*
 .env
 config/database.yml
 db/schema.rb

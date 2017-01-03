@@ -1,0 +1,14 @@
+.contact-container
+  .row
+    = simple_form_for @form, url: message_path, remote: true do |form|
+      = form.simple_fields_for @form.message do |f|
+        .col-sm-6
+          = f.input :body, as: :text, label: false, placeholder: 'Message', input_html: { class: 'no-resize', rows: '7' }
+        .col-sm-6
+          .row
+            .col-xs-12
+              = f.input :name, label: false, placeholder: 'Name'
+            .col-xs-12
+              = f.input :email, label: false, placeholder: 'Email'
+            .col-xs-12
+              = form.submit 'Submit', class: 'btn btn-lg btn-secondary'

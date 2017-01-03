@@ -1,0 +1,143 @@
+section#home
+  .container
+    .row
+      .col-md-12
+        h1 Foncy & Kat
+        h3
+          span Are getting
+        h2
+          i.fa.fa-heart-o
+          | MARRIED!
+          i.fa.fa-heart-o
+        h4 And They are please to
+        h5
+          span ~ Invite you ~
+section#about
+  .line
+  .about-inner
+    .container
+      .row
+        .col-md-4
+          h2 Foncy
+          p.red
+            | Foncy, 21 Tahun. Pria tak tampan yang bercita-cita menjadi jutawan dengan modal pas-pasan.
+            | Hobi berenang, menolong teman, sepak bola, main futsal, main PES, dan segala sesuatu tentang bal-balan.
+            | Bisanya cuma nyinyir dan komentar, agak sombong tapi nggak arogan.
+          blockquote.red
+            | Cinta itu.. jika kamu bilang iya ~ waktu aku bertanya "Maukah kau menikah denganku?" #eeaaa
+            small Foncy
+        .col-md-4
+          .about-img-container
+            = image_tag 'pages/bottom.png', class: 'img-responsive about-img'
+        .col-md-4
+          h2 Kat
+          p.red
+            | Kat, 20 Tahun. Wanita periang yang bercita-cita menjadi seorang pendidik dan pengajar.
+            | Murah senyum, galak, tapi sangat cengeng. Tinggi, langsing, hidung pesek dan bergingsul.
+            | Hobi makan es krim, mie ayam dan ngambek. Care sama temen dan pokoknya lakik #ehh.
+          blockquote.red
+            | Cinta itu.. jika kamu langsung datang kerumah dan melamarku ~ #duhh
+            small Kat
+section#ceremony
+  .line
+  .container
+    .row
+      .col-md-12
+        h1 The Ceremony
+        h3
+          span Will Be Held On
+        h2 March 5
+        h5
+          span ~ 2017 ~
+        h4 San Sebastian Church, 1:30pm
+section#photos
+  .line
+  .container
+    .row
+      .col-md-4
+        = image_tag 'pages/bottom.png', class: 'img-responsive about-img'
+        h2 Wedding Gallery
+        p.red These photos are from instagram with hashtag #foncyandkat
+      .col-md-8
+        #wedding-photo.carousel.slide data-ride="carousel"
+          .carousel-inner
+            - @photos.each_slice(3).with_index do |(*photos), index|
+              .item class="#{'active' if index == 0}"
+                .row
+                  - photos.each do |record|
+                    .col-md-4.col-sm-4.col-xs-12.animated.fadeInLeftBig
+                      = link_to record.image_url, class: 'gallery-images' do
+                        .photo-gallery
+                          = image_tag record.image_url, class: 'img-responsve'
+          a.left.carousel-control data-slide="prev" href="#wedding-photo"
+            span.glyphicon.glyphicon-chevron-left
+          a.right.carousel-control data-slide="next" href="#wedding-photo"
+            span.glyphicon.glyphicon-chevron-right
+section#story
+  .line
+  .container
+    .row
+      .col-md-12
+        h2 The Story
+        ul.content
+          li
+            h3.content-avatar.avatar-top
+              .img-avatar style="background-image: url('#{image_path('pages/gravatar.jpg')}');"
+            ul.red
+              li.content-item.content-text
+                h3 Hae :"
+                .text I meet you at the first time. I smile, and you don't smile back to me. I was silent, and you laugh out loud alone. I'ts so fuck'in romantic epic. :))
+                time datetime=""
+                  i.fa.fa-calendar
+                  | December, 19 2010
+              li.content-item.content-photo
+                = image_tag 'pages/img05.jpg'
+                p.caption At the first date, we ate ice cream and "cemong" together. We enjoyed the evening. Sitting on the bench side of the road. Telling each other silly thing, and I was able to make a little melted. Emm.. I mean make your ice cream melts. :|
+                time datetime=""
+                  i.fa.fa-calendar
+                  | January, 19 2011
+              li.content-item.content-photo
+                = image_tag 'pages/img06.jpg'
+                time datetime=""
+                  i.fa.fa-calendar
+                  | February, 19 2011
+              li.content-item.content-chat
+                p.text.chat.odd A : Sist..
+                p.text.chat.even B : Yeah..
+                p.text.chat.odd A : Sist..
+                p.text.chat.even B : Yeahh broth..
+                p.text.chat.odd A : Would you be..
+                | And then silence....
+                time datetime=""
+                  i.fa.fa-calendar
+                  | March, 26 2011
+              li.content-item.content-quote
+                blockquote
+                  p
+                    | I do not promise anything, I can only promise one thing. I would still handsome until tomorrow...
+                    small avriqq
+                  time datetime=""
+                    i.fa.fa-calendar
+                    | March, 26 2013
+              li.content-item.content-photo
+                = image_tag 'pages/img07.jpg'
+                p.caption And finally, we are now getting married. :')
+                time datetime=""
+                  i.fa.fa-calendar
+                  | March, 26 2016
+          li.content-end
+            h3.content-avatar.avatar-end
+              .img-avatar style="background-image: url('#{image_path('pages/avatar.png')}');"
+section#contact
+  .line
+  .container
+    .row
+      .col-md-12
+        h2 Contact Us
+        #message
+          = render partial: 'message'
+        h5#message-thankyou.hide
+          span ~ Thank you ~
+      .col-md-12
+        #map
+          iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.9909090055526!2d120.98685261484027!3d14.599593689803157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f81884a51b%3A0x84bdc96c63988b42!2sSan+Sebastian+Church!5e0!3m2!1sen!2sph!4v1482901327369" style="border:0"

@@ -1,0 +1,401 @@
+/*
+	========================================
+	DITINGGAL RABI WEDDING INVITATION THEME
+	========================================
+	
+	@author			: @_TemplateNinja
+	@version		: v1.3
+	@date-create	: 02/26/2013
+	@last-update	: 03/19/2015
+	@file-name		: style.css
+
+*/
+/*
+	========================================
+	TABLE OF CONTENT
+	========================================
+	
+	[1. GLOBAL STYLE]
+	[2. NAVBAR]
+	[3. COPYRIGHT]
+
+*/
+/*
+	==================
+	[1. GLOBAL STYLE]
+	==================
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  background-color: #ffffff;
+  background-image: none;
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  -ms-background-size: initial;
+  -o-background-size: initial;
+  background-size: initial;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  overflow-x: hidden;
+  scrollbar-face-color: $primary-yellow;
+}
+@media (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'EB Garamond', serif;
+}
+a {
+  color: $primary-yellow;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #999;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+::-moz-selection {
+  background-color: $primary-yellow;
+  color: #fff;
+  text-shadow: none;
+}
+::-webkit-selection {
+  background-color: $primary-yellow;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background-color: $primary-yellow;
+  color: #fff;
+  text-shadow: none;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary-yellow;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  background-color: #ddd;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 6px 12px;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  line-height: 1.42857143em;
+  font-weight: 400;
+  color: #555;
+  background-color: #ffffff;
+  background-image: none;
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  -ms-background-size: initial;
+  -o-background-size: initial;
+  background-size: initial;
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color 0.15s ease-in-out box-shadow 0.15s ease-in-out ease-in-out;
+  -moz-transition: border-color 0.15s ease-in-out box-shadow 0.15s ease-in-out ease-in-out;
+  -ms-transition: border-color 0.15s ease-in-out box-shadow 0.15s ease-in-out ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out box-shadow 0.15s ease-in-out ease-in-out;
+  transition: border-color 0.15s ease-in-out box-shadow 0.15s ease-in-out ease-in-out;
+  -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -ms-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  border-color: #fff;
+  color: $primary-yellow;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  -ms-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.no-resize {
+  resize: none !important;
+}
+.btn.btn-secondary {
+  background-color: #ffffff;
+  background-image: none;
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  -ms-background-size: initial;
+  -o-background-size: initial;
+  background-size: initial;
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  color: #999;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
+  background-color: $primary-yellow;
+  background-image: none;
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  -ms-background-size: initial;
+  -o-background-size: initial;
+  background-size: initial;
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  border: 1px solid $secondary-yellow;
+  color: #fff;
+  text-shadow: 0 -1px 0 #999999;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+	==============
+	[2. NAVBAR]
+	==============
+*/
+.navbar-default {
+  min-height: 65px;
+  background-color: transparent;
+  background-image: asset-url('layouts/bg.png');
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -ms-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+  background-position: top center;
+  background-repeat: repeat;
+  background-attachment: initial;
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  .navbar-default {
+    border-bottom: 1px solid #ddd;
+  }
+}
+.navbar-default .navbar-brand {
+  min-height: 65px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: $primary-yellow;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: rgba(0, 0, 0, 0.35);
+  background-color: $primary-yellow;
+}
+.navbar-default .navbar-nav {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav {
+    width: 100%;
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.navbar-default .navbar-nav > li > a {
+  position: relative;
+  padding-top: 22px;
+  padding-right: 24px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+  color: #999;
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav > li > a {
+    display: block;
+    padding: 12px 15px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+  }
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: $primary-yellow !important;
+  background-color: transparent !important;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a:focus {
+  color: #999;
+  box-shadow: none;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: $primary-yellow !important;
+  background-color: transparent !important;
+}
+.navbar-default .navbar-toggle {
+  margin-top: 15px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $primary-yellow;
+}
+
+/*
+	================
+	[3. COPYRIGHT]
+	================
+*/
+#copyright {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 10px;
+  background-color: transparent;
+  background-image: asset-url('layouts/bg.png');
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -ms-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+  background-position: top center;
+  background-repeat: repeat;
+  background-attachment: initial;
+}
+#copyright h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $primary-yellow;
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+#copyright h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+  text-transform: capitalize;
+  letter-spacing: 8px;
+}
+#copyright p {
+  font-family: 'EB Garamond', serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+  text-transform: uppercase;
+}
+#copyright .social-icon {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#copyright .social-icon > li > a {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  display: block;
+  border-radius: 100%;
+  background-color: $primary-yellow;
+}
+#copyright .social-icon > li > a > .fa {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 55px;
+  height: 55px;
+  margin-left: -11px;
+  margin-top: -13px;
+  color: #fff;
+  font-family: 'FontAwesome';
+  font-size: 28px;
+  line-height: normal;
+  font-weight: 400;
+}
+#copyright .social-icon > li > .icon-twitter:hover {
+  background: #4099FF;
+}
+#copyright .social-icon > li > .icon-facebook:hover {
+  background: #4467AD;
+}
+#copyright .social-icon > li > .icon-google:hover {
+  background: #FF4B4B;
+}
+#copyright .social-icon > li > .icon-instagram:hover {
+  background: #6e99b2;
+}

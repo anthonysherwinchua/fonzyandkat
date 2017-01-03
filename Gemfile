@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -12,16 +12,25 @@ gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
+gem 'slim-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 
+# Use Simple form for generating forms
+gem 'simple_form'
+
 # Use AdminLTE template for admin section
 gem 'adminlte2-rails'
 
-gem 'rollbar'
+# Use to scrape instagram public contents -- because Instagram don't want us to have their content via their API
+gem 'insta_scrape'
+
+# Use sidekiq, redis and sidekiq_cron for scheduled background jobs
+gem 'sidekiq'
+gem 'sidekiq-cron', '~> 0.4.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -50,9 +59,10 @@ group :test do
   gem 'simplecov', require: false
   gem 'webmock'
   gem 'rails-controller-testing'
-  gem "codeclimate-test-reporter", "~> 1.0.0"
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
 end
 
 group :production, :staging do
   gem 'rails_12factor'
+  gem 'rollbar'
 end
