@@ -134,16 +134,9 @@ section#contact
     .row
       .col-md-12
         h2 Contact Us
-        .contact-container
-          .row
-            form
-              .col-md-6.col-sm-6
-                textarea.form-control.no-resize placeholder="Message" rows="7"
-              .col-md-6.col-sm-6
-                input.form-control placeholder="Name" type="text" /
-                input.form-control placeholder="Email" type="email" /
-                input.btn.btn-lg.btn-secondary type="submit" value="Submit" /
-        h5
+        #message
+          = render partial: 'message'
+        h5#message-thankyou.hide
           span ~ Thank you ~
       .col-md-12
         #map

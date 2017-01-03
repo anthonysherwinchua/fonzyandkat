@@ -1,0 +1,7 @@
+<% if @form.message.errors.blank? %>
+  $("#message").fadeOut('slow', function(){
+    $("#message-thankyou").removeClass('hide').fadeIn();
+  });
+<% else %>
+  $("#message").html("<%= j render partial: 'pages/message' %>");
+<% end %>

@@ -19,10 +19,12 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 
+# Use Simple form for generating forms
+gem 'simple_form'
+
 # Use AdminLTE template for admin section
 gem 'adminlte2-rails'
 
-gem 'rollbar'
 
 # Use to scrape instagram public contents -- because Instagram don't want us to have their content via their API
 gem 'insta_scrape'
@@ -63,4 +65,5 @@ end
 
 group :production, :staging do
   gem 'rails_12factor'
+  gem 'rollbar'
 end
