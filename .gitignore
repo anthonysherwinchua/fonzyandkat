@@ -18,6 +18,6 @@ config/database.yml
 db/schema.rb
 /coverage
 .DS_Store
-
+dump.rdb
 .idea
 .byebug_history

@@ -181,8 +181,6 @@ GEM
     redis (3.3.2)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
-    rollbar (2.14.0)
-      multi_json
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -318,7 +316,6 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-controller-testing
   rails_12factor
-  rollbar
   rspec-rails (~> 3.5)
   rubocop (~> 0.41.2)
   sassc-rails
